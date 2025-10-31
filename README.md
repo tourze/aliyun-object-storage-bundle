@@ -1,1 +1,0 @@
-# aliyun-object-storage-bundle

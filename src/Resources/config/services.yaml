@@ -1,0 +1,23 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  # Factory
+  Tourze\AliyunObjectStorageBundle\Factory\OssAdapterFactory:
+    arguments:
+      $httpClient: '@http_client'
+      $logger: '@logger'
+
+  # Client interface
+  Tourze\AliyunObjectStorageBundle\Contract\OssClientInterface:
+    factory: ['@Tourze\AliyunObjectStorageBundle\Factory\OssAdapterFactory', 'createClient']
+
+  # URL Generator
+  Tourze\AliyunObjectStorageBundle\Url\PublicUrlGenerator:
+    factory: ['@Tourze\AliyunObjectStorageBundle\Factory\OssAdapterFactory', 'createUrlGenerator']
+
+  # Filesystem Adapter
+  Tourze\AliyunObjectStorageBundle\Adapter\AliyunOssAdapter:
+    factory: ['@Tourze\AliyunObjectStorageBundle\Factory\OssAdapterFactory', 'createAdapter']
