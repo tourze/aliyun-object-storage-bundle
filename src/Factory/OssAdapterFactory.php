@@ -11,11 +11,11 @@ use Tourze\AliyunObjectStorageBundle\Client\OssClient;
 use Tourze\AliyunObjectStorageBundle\Signature\OssSignature;
 use Tourze\AliyunObjectStorageBundle\Url\PublicUrlGenerator;
 
-class OssAdapterFactory
+readonly class OssAdapterFactory
 {
     public function __construct(
-        private readonly HttpClientInterface $httpClient,
-        private readonly LoggerInterface $logger,
+        private HttpClientInterface $httpClient,
+        private LoggerInterface $logger,
     ) {
     }
 

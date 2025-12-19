@@ -10,6 +10,6 @@ use Tourze\PHPUnitSymfonyUnitTest\AbstractDependencyInjectionExtensionTestCase;
  * @internal
  */
 #[CoversClass(AliyunObjectStorageExtension::class)]
-class AliyunObjectStorageExtensionTest extends AbstractDependencyInjectionExtensionTestCase
+final class AliyunObjectStorageExtensionTest extends AbstractDependencyInjectionExtensionTestCase
 {
 }

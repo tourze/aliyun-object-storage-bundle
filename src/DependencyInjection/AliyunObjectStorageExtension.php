@@ -6,7 +6,7 @@ namespace Tourze\AliyunObjectStorageBundle\DependencyInjection;
 
 use Tourze\SymfonyDependencyServiceLoader\AutoExtension;
 
-class AliyunObjectStorageExtension extends AutoExtension
+final class AliyunObjectStorageExtension extends AutoExtension
 {
     protected function getConfigDir(): string
     {

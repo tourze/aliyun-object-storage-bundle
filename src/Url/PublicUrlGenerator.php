@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Tourze\AliyunObjectStorageBundle\Url;
 
-class PublicUrlGenerator
+readonly class PublicUrlGenerator
 {
     public function __construct(
-        private readonly string $endpoint,
-        private readonly string $bucket,
-        private readonly string $prefix = '',
-        private readonly ?string $publicDomain = null,
-        private readonly bool $cnameEnabled = false,
-        private readonly bool $internal = false,
+        private string $endpoint,
+        private string $bucket,
+        private string $prefix = '',
+        private ?string $publicDomain = null,
+        private bool $cnameEnabled = false,
+        private bool $internal = false,
     ) {
     }
 

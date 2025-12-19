@@ -6,11 +6,11 @@ namespace Tourze\AliyunObjectStorageBundle\Signature;
 
 use Tourze\AliyunObjectStorageBundle\Exception\OssException;
 
-class OssSignature
+readonly class OssSignature
 {
     public function __construct(
-        private readonly string $accessKeyId,
-        private readonly string $accessKeySecret,
+        private string $accessKeyId,
+        private string $accessKeySecret,
     ) {
     }
 

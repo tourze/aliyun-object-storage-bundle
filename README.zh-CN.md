@@ -87,7 +87,7 @@ ALIYUN_OSS_INTERNAL=false                  # true 使用内网 endpoint（如 ec
 ## 快速开始
 
 ```php
-use Tourze\FileStorageBundle\Factory\FilesystemFactoryInterface;
+use Tourze\FlysystemBundle\Factory\FilesystemFactoryInterface;
 
 $filesystem = $container->get(FilesystemFactoryInterface::class)->createFilesystem();
 

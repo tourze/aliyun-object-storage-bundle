@@ -24,13 +24,13 @@ use League\Flysystem\UnableToWriteFile;
 use Tourze\AliyunObjectStorageBundle\Contract\OssClientInterface;
 use Tourze\AliyunObjectStorageBundle\Exception\OssException;
 
-class AliyunOssAdapter implements FilesystemAdapter
+readonly class AliyunOssAdapter implements FilesystemAdapter
 {
-    private readonly PathPrefixer $pathPrefixer;
+    private PathPrefixer $pathPrefixer;
 
     public function __construct(
-        private readonly OssClientInterface $client,
-        private readonly string $bucket,
+        private OssClientInterface $client,
+        private string $bucket,
         string $prefix = '',
     ) {
         $this->pathPrefixer = new PathPrefixer($prefix);

@@ -87,7 +87,7 @@ When required variables are available, the Bundle automatically decorates FileSt
 ## Quick Start
 
 ```php
-use Tourze\FileStorageBundle\Factory\FilesystemFactoryInterface;
+use Tourze\FlysystemBundle\Factory\FilesystemFactoryInterface;
 
 $filesystem = $container->get(FilesystemFactoryInterface::class)->createFilesystem();
 
